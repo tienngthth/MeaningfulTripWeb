@@ -1,0 +1,152 @@
+.main-page {
+    margin-bottom: 60px;
+}
+/* ----------------------------------------------about us-------------------------------------------- */
+.about-us {
+    display: flex;
+    flex-direction: row;
+}
+.about-us img {
+    width: 50%;
+}
+.introduction-text {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 80px;
+    width: 50%;
+    background-color: rgb(230, 238, 255);
+}
+.introduction-text * {
+    text-align: left;
+    font-weight: lighter;
+}
+.introduction-text h4 {
+    font-weight: bold;
+}
+.layout-intro {
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 250px));
+    gap: 30px;
+}
+.part-intro-2 {
+    width: 250px;
+}
+@media screen and (max-width: 1000px) {
+    .about-us {
+        display: block; 
+    }
+    .about-us img, .introduction-text {
+        width: 100%;
+    }
+}
+/* -----------------------------------------------testimonials-------------------------------------- */
+.testimonials {
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 500px));
+    padding: 90px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+.quote {
+    padding-top: 70px;
+    padding-left: 20px;   
+}
+.quote-para {
+    margin: 35px;
+    padding: 40px;
+    text-align: left;
+    transition: ease;
+    transition-duration: 0.2s;
+}
+.quote-para:hover {
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+    background-color: rgba(230, 238, 255, 0.5);
+    margin-top: 30px;
+}
+/* -----------------------------------------project slides-------------------------------------------- */
+.projects-slider {
+    width: 450px;
+}
+.project-slide {
+    width: 450px;
+    position: relative;
+}
+.project-slide img {
+    width: 450px;
+    height: 350px;
+    opacity: 0.5;
+    transition: ease;
+    transition-duration: 0.3s;
+}
+.projects-slider:hover img {
+    opacity: 1;
+}
+.slide-text {
+    background-color: rgba(242, 242, 242, 0.4);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 80%;
+    margin: 0;
+    padding-top: 50px;
+}
+.project-slide p {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: lighter;
+    opacity: 0.8;
+}
+/* --------------------------------------- register link ---------------------------------------------- */
+.apply-link {
+    padding: 10px;
+    border-radius: 70px;
+    border: 0.5px solid black;
+    transition: linear;
+    transition-duration: 0.1s;
+    position: relative;
+    top: 70px;
+    z-index: 10;    
+}
+.apply-link:hover {
+    background-color: black;
+    color: white;
+}
+/* ------------------------------------switching buttons and arrows ----------------------------------- */
+.switching-slides-elements {
+    user-select: none;
+    z-index: 10;
+    position: relative;
+    bottom: 40px;
+}
+.prev, .next {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(191, 191, 191);
+    transition: 0.6s ease;
+    z-index: 2;
+    position: absolute;
+    bottom: 10px;
+}
+.prev {
+    left: 15px;
+}
+.next {
+    right: 15px;
+}
+.next:hover, .prev:hover {
+    color: grey;
+}
+.dot {
+margin: 10px 4px;
+cursor: pointer;
+height: 13px;
+width: 13px;
+border: 1px solid white;
+border-radius: 50%;
+display: inline-block;
+transition: 0.6s ease;
+}
+.dot:hover, .dot.focus {
+    background-color: white;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | MTBU</title>
+  <link href="../CSS/Util.css" rel="stylesheet">
+  <link href="../CSS/ContactUs.css" rel="stylesheet">
+</head>
+<body onload="editSubject()">
+  <!-- Navigation bar -->
+  <div class="navigation-bar-responsive" id="navigation-bar-responsive">
+    <div class="navigation-bar" id="navigation-bar">
+      <!-- outside menu box -->
+      <div class="nav-unresponsive">
+        <!-- menu icon -->
+        <a id="nav-icon" class="nav-icon" onclick="openNavBar()">
+          <img alt="location" src="../Photos/menu.png">
+        </a>
+        <h3>MEANINGFUL TRIP ☘ BEAUTIFUL YOU</h3>
+      </div>
+      <!--responsive navigation bar -->
+      <div class="nav-responsive">
+        <!-- to home page button -->
+        <a type="button" href="Home.html">HOME</a>
+        <!-- drop box -->
+        <div class="drop-down">
+          <button>HOW IT WORKS</button>
+          <div class="drop-down-content">
+            <a href="ProjectsInfo.html">✎ Projects Information</a>
+            <a href="SelectionProcess.html">✓ Selection Process</a>
+            <a href="GetReady.html">☑ Get Ready</a>
+          </div>
+        </div>
+        <!-- to contact page button -->
+        <a type="button" href="ContactUs.html"> CONTACT US </a>
+        <!-- holine button -->
+        <div class="hotline">
+          <button onclick="openForm()" id="hotline-btn">✆ HOTLINE</button>
+          <div id="hotline-form" class="hotline-form">
+            <div class="hotline-form-box">
+              <span onclick="closeForm()" class="close">&times;</span></br></br>
+              <p>ENTER YOUR PHONE TO BE CONTACTED ASAP!<p></p>
+                <form>
+                  <input id="uphone" type="text" placeholder="Enter your phone here" required pattern=".*\S.*" />
+                  <input type="submit" value="Receive call now" onclick="validateSingleFieldForm('uphone')">
+                </form>
+                <p>*Or you can contact us at: (84) 0101.1110</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- location icon to google map -->
+      <a class="location-icon" target="_blank" ; href="http://bit.ly/mapToMTBY">
+        <img alt="location" src="../Photos/marker.png">
+      </a>
+    </div>
+  </div>
+  <!-- main page -->
+  <div class="main-page">
+    <!-- Message   -->
+    <div class="message">
+      <h3>CONTACT US</h3>
+      <form>
+        <div class="personal-info">
+          <input id="message-name" class="message-text" type="text" placeholder="Name" required pattern=".*\S.*" />
+          <input id="message-email" class="message-text" type="text" placeholder="Email" required pattern=".*\S.*" />
+        </div>
+        <input id="message-subject" class="message-text" type="text" placeholder="Subject">
+        <textarea id="message-message" class="message-text" placeholder="Type your message here..." required
+          pattern=".*\S.*" /></textarea>
+        <input type="submit" value="Submit"
+          onclick="validateMultipleFieldsForm(['message-name','message-email','message-message'])">
+        <p>Thanks for submitting!</p>
+      </form>
+    </div>
+    <!-- Map -->
+    <div id="map"></div>
+    <!-- Contact info -->
+    <div class="contact-info">
+      <div class="contact-box">
+        <h4>MEET US</h4></br>
+        <p>Please send your comments and inquiries to: </br></br></p>
+        <h5>MEANINGFUL TRIP BEAUTIFUL YOU </h5>
+        <p>
+          88 Eight Street, Level 8 </br>
+          District 8, HCMC, Vietnam 700000 </br>
+        </p>
+      </div>
+      <div class="contact-box">
+        <h4>TALK TO US</h4></br>
+        <p>
+          Monday – Friday: 0830 to 2330 (GMT +7) </br>
+          Saturday – Sunday: 0830 to 1800 (GMT +7) </br>
+          *Including Public Holidays </br></br>
+          <img alt="Phone" src="../Photos/phone.jpg"> (84) 0101.1110
+          beautifultrip@gmail.com
+        </p>
+      </div>
+      <div class="contact-box">
+        <h4>SUBSCRIBE US</h4></br>
+        <form>
+          <input id="subscribe-email" type="text" placeholder="Email Address" required pattern=".*\S.*" />
+          <input type="submit" value="Submit" onclick="validateSingleFieldForm('subscribe-email')">
+        </form>
+        <div class="contact-shortcut">
+          <a target="_blank" ; href="https://www.facebook.com/tien.ng.2">
+            <img alt="facebook" src="../Photos/facebook.png">
+          </a>
+          <a target="_blank" ; href="https://www.linkedin.com/in/tienng2/">
+            <img alt="linkedin" src="../Photos/linkedin.png">
+          </a>
+          <a target="_blank" ; href="mailto:tiennguyenkit@gmail.com">
+            <img alt="email" src="../Photos/email.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- js, footer -->
+<footer>
+  <!-- messenger btn -->
+  <a class="messenger" href="https://www.messenger.com/t/MeaningfulTripBeautifulYou" target="_blank">
+    <img class="messenger-img" alt="messenger" src="../Photos/messenger.png">
+  </a>
+
+  <!-- up btn -->
+  <button class="up-btn" onclick="toTop()" id="up-btn">
+    <img alt="up" src="../Photos/up.png">
+  </button>
+
+  <!-- copy right -->
+  <p class="contact-footer">©2020 by Meaningful Trip Beautiful You. All Rights Reserved</p>
+
+  <!-- js -->
+  <script src="../Script/Functions.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHGaQfwjoq4vx2Ze2J5c-PUeHuqCgweMc&callback=initMap">
+    </script>
+</footer>
+</html>

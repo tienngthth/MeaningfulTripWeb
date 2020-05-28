@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Information | MTBU</title>
+  <link href="../CSS/Util.css" rel="stylesheet">
+  <link href="../CSS/ProjectsInfo.css" rel="stylesheet">
+</head>
+<body onload="showProjectInfo()">
+  <!-- Navigation bar -->
+  <div class="navigation-bar-responsive" id="navigation-bar-responsive">
+    <div class="navigation-bar" id="navigation-bar">
+      <!-- outside menu box -->
+      <div class="nav-unresponsive">
+        <!-- menu icon -->
+        <a id="nav-icon" class="nav-icon" onclick="openNavBar()">
+          <img alt="location" src="../Photos/menu.png">
+        </a>
+        <h3>MEANINGFUL TRIP ☘ BEAUTIFUL YOU</h3>
+      </div>
+      <!--responsive navigation bar -->
+      <div class="nav-responsive">
+        <!-- to home page button -->
+        <a type="button" href="Home.html">HOME</a>
+        <!-- drop box -->
+        <div class="drop-down">
+          <button>HOW IT WORKS</button>
+          <div class="drop-down-content">
+            <a href="ProjectsInfo.html">✎ Projects Information</a>
+            <a href="SelectionProcess.html">✓ Selection Process</a>
+            <a href="GetReady.html">☑ Get Ready</a>
+          </div>
+        </div>
+        <!-- to contact page button -->
+        <a type="button" href="ContactUs.html"> CONTACT US </a>
+        <!-- holine button -->
+        <div class="hotline">
+          <button onclick="openForm()" id="hotline-btn">✆ HOTLINE</button>
+          <div id="hotline-form" class="hotline-form">
+            <div class="hotline-form-box">
+              <span onclick="closeForm()" class="close">&times;</span></br></br>
+              <p>ENTER YOUR PHONE TO BE CONTACTED ASAP!<p></p>
+                <form>
+                  <input id="uphone" type="text" placeholder="Enter your phone here" required pattern=".*\S.*" />
+                  <input type="submit" value="Receive call now" onclick="validateSingleFieldForm('uphone')">
+                </form>
+                <p>*Or you can contact us at: (84) 0101.1110</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- location icon to google map -->
+      <a class="location-icon" target="_blank" ; href="http://bit.ly/mapToMTBY">
+        <img alt="location" src="../Photos/marker.png">
+      </a>
+    </div>
+  </div>
+  <!-- main page -->
+  <div class="main-page">
+    <!-- about SDG -->
+    <div class="SDG">
+      <img alt="SDG" src="../Photos/SDG.png">
+      <div class="SDG-text">
+        <h2>What are the Sustainable Development Goals? </h2>
+        The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by all United Nations
+        Member States in 2015 as a universal call to action to end poverty, protect the planet and ensure that all
+        people enjoy peace and prosperity by 2030.
+      </div>
+      <div class="SDG-text">
+        <h2>What is Meaningful Trip's role? </h2>
+        Meaningful Trip is an international organization that creates opportunies for youth and our partners to
+        contribute to the SGD. By that, activating leaderships and strive for a better world. </br>
+        Our projects are designed to serve SDG 4, 11 and 15.
+      </div>
+    </div>
+    <!-- about projects -->
+    <div class="projects">
+      <!-- first project -->
+      <div class="a-project">
+        <!-- description -->
+        <div class="project-description">
+          <h2>Waste To Love </h2>
+          <h4>Description</h4>
+          <p> Households are the main contributor to food wastage in Malaysia. Its food waste occupy most of the
+            landfill. This is caused by the attitude, lack of awareness and actions of the general public towards food
+            wastage. We aim to increase awareness, change attitude and initiate easy & obvious actions of youth towards
+            reducing preventable food waste & fully utilizing food waste for them to influence their peers and their
+            households.</p>
+          <h4>Main activities</h4>
+          <ul>
+            <li>📖 Training with learning partners </li>
+            <li>📝 Data analysis & Documentation </li>
+            <li>🌎 School workshops </li>
+            <li>👀 Camp/Conference organizing </li>
+            <li>✍🏻 Weekly planning with team </li>
+          </ul>
+          <div class="contact-link" onclick="getSubject(1)">Ask for more</div>
+        </div>
+        <!-- image and link to apply inforation-->
+        <div class="image">
+          <img alt="foodWaste" src="../Photos/foodWaste.jpg">
+          <!-- link to apply information -->
+          <a class="register-link" href="SelectionProcess.html">
+            <!-- link description -->
+            <div class="link-description">
+              <p>TURN WASTE TO WEALTH</br>
+                REDUCE GREEN HOUSE GASES</br>
+                CREATE HAPPINESS
+              </p>
+              <h3>READY TO APPLYYYYY</h3>
+              <img src="../Photos/arrow.png" alt="registerLink">
+            </div>
+          </a>
+        </div>
+        <!-- information table -->
+        <div class="project-info">
+          <table>
+            <tr>
+              <th>SDG</th>
+              <th>Location</th>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Ha Noi City/ Ho Chi Minh City Vietnam</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Duration</th>
+              <th>Working Hour</th>
+            </tr>
+            <tr>
+              <td>45 days</td>
+              <td>10am - 3pm</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Start dates</th>
+              <th>Accommodation and meals</th>
+            </tr>
+            <tr>
+              <td>15th of each month</td>
+              <td>No accommodation covered </br>
+                Covered 2 meals/day</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Fee</th>
+              <th>Salary</th>
+            </tr>
+            <tr>
+              <td>$120</td>
+              <td>Unpaid</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- second project -->
+      <div class="a-project">
+        <!-- description -->
+        <div class="project-description">
+          <h2>Beautiful City</h2>
+          <h4>Description</h4>
+          <p>First two weeks we will learn about the plastic pollution and our strategies. The next two weeks we will
+            visit and explore the cities along with visiting spots to do our clean ups. The last 2 weeks we will be
+            executing our plan with the waste collected.</p>
+          <h4>Main activities</h4>
+          <ul>
+            <li>✍🏻 Sessions about plastic pollution and discussing our plans for the waste collected </li>
+            <li>🌎 Trip for 2 weeks to visit explore and to do our clean ups on the major and affected cities </li>
+            <li>👀 Visiting workshops to reuse the plastic collected </li>
+            <li>📝 Creating new ideas for spreading the awareness </li>
+          </ul>
+          <div class="contact-link" onclick="getSubject(2)">Ask for more</div>
+        </div>
+         <!-- image and link to apply information -->
+        <div class="image">
+          <img alt="greenCity" src="../Photos/greenCity.jpg">
+          <!-- link to apply information -->
+          <a class="register-link" href="SelectionProcess.html">
+            <!-- link description -->
+            <div class="link-description">
+              <p>JOIN US TO COLOR THE CITY </br>
+                WITH MANY FUN ACTIVITIES!
+              </p>
+              <h3>READY TO APPLYYYYY</h3>
+              <img src="../Photos/arrow.png" alt="registerLink">
+            </div>
+          </a>
+        </div>
+        <!-- information table -->
+        <div class="project-info">
+          <table>
+            <tr>
+              <th>SDG</th>
+              <th>Location</th>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Ha Noi City/ Ho Chi Minh City Vietnam</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Duration</th>
+              <th>Working Hour</th>
+            </tr>
+            <tr>
+              <td>45 days</td>
+              <td>10am - 3pm</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Start dates</th>
+              <th>Accommodation</th>
+            </tr>
+            <tr>
+              <td>1st of each month</td>
+              <td>Covered and provided - 3 meals/day</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Fee</th>
+              <th>Salary</th>
+            </tr>
+            <tr>
+              <td>$120</td>
+              <td>Unpaid</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- third project -->
+      <div class="a-project">
+        <!-- description -->
+        <div class="project-description">
+          <h2>Light To The Future </h2>
+          <h4>Description</h4>
+          <p>Throwing yourself into a new place to challenge your leadership. Putting yourself out to help our children
+            get better communication skills by teaching English. You will play a role as a teacher with practical
+            opportunities: preparing materials for the class, holding outdoor activities, marketing for the project.</p>
+          <h4>Main activities</h4>
+          <ul>
+            <li>📖 Teaching English by innovative methods </li>
+            <li>📝 Preparing essential and appropriate materials in advance for every class</li>
+            <li>🌎 Holding outdoor activities for students to gain more practical knowledge beside the theory</li>
+            <li>👀 Keeping track student's stream of consciousness</li>
+            <li>✍🏻 Promoting for the center with new website, public posts </li>
+          </ul>
+          <div class="contact-link" onclick="getSubject(3)">Ask for more</div>
+        </div>
+        <!-- image and link to apply information -->
+        <div class="image">
+          <img alt="teachingChildren" src="../Photos/teachingChildren.jpg">
+          <!-- link to apply information  -->
+          <a class="register-link" href="SelectionProcess.html">
+            <!-- link description -->
+            <div class="link-description">
+              <p>LIGHTENING A HUNDRED DREAMS</br>
+                INTRODUCE THE WORLD </br>
+                TO WONDERFUL KIDS
+              </p>
+              <h3>READY TO APPLYYYYY</h3>
+              <img src="../Photos/arrow.png" alt="registerLink">
+            </div>
+          </a>
+        </div>
+        <!-- information table -->
+        <div class="project-info">
+          <table>
+            <tr>
+              <th>SDG</th>
+              <th>Location</th>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Vung Tau City/ Cu Chi Province Vietnam</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Duration</th>
+              <th>Working Hour</th>
+            </tr>
+            <tr>
+              <td>45 days</td>
+              <td>3pm - 8pm</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Start dates</th>
+              <th>Accommodation and meals</th>
+            </tr>
+            <tr>
+              <td>1st of each month</td>
+              <td>Covered and provided - 3 meals/day</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Fee</th>
+              <th>Salary</th>
+            </tr>
+            <tr>
+              <td>$120</td>
+              <td>Unpaid</td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+<!-- footer -->
+<footer>
+  <!-- up to top btn -->
+  <button class="up-btn" onclick="toTop()" id="up-btn">
+    <img alt="up" src="../Photos/up.png">
+  </button>
+  <!-- messenger btn -->
+  <a class="messenger" href="https://www.messenger.com/t/MeaningfulTripBeautifulYou" target="_blank">
+    <img class="messenger-img" alt="messenger" src="../Photos/messenger.png">
+  </a>
+  <!-- footer -->
+  <div class="footer">
+    <!-- follow part -->
+    <div class="follow-us">
+      <!-- subscripe form -->
+      <div class="footer-subscribe-form">
+        <form>
+          <input id="subscribe-email" type="text" placeholder="Email Address" required pattern=".*\S.*" />
+          <input type="submit" value="SUBSCRIBE" onclick="validateSingleFieldForm('subscribe-email')">
+        </form>
+      </div>
+      <!-- contact shortcut -->
+      <div class="contact-shortcut">
+        <h2> FOLLOW US </h2>
+        <a target="_blank" ; href="https://www.facebook.com/tien.ng.2">
+          <img alt="facebook" src="../Photos/facebook.png">
+        </a>
+        <a target="_blank" ; href="https://www.linkedin.com/in/tienng2/">
+          <img alt="linkedin" src="../Photos/linkedin.png">
+        </a>
+        <a target="_blank" ; href="mailto:tiennguyenkit@gmail.com">
+          <img alt="email" src="../Photos/email.png">
+        </a>
+      </div>
+    </div>
+    <!-- more info  -->
+    <div class=more-info>
+
+      <!-- description -->
+      <div class="more-info-box">
+        <p>
+          <a href="Home.html">
+            <h2>Meaningful Trip Beautiful You</h2>
+          </a>
+          When your trips are not only about you anymore. <br />
+          Your hapiness is multiplied by thoundsands of smiles. <br />
+          The views, the people, and the actions. <br />
+          Beautiful by meaningful. <br />
+          You own your experience. <br />
+        </p>
+      </div>
+
+      <!-- project link -->
+      <div class="more-info-box">
+        <p>
+          <a href="ProjectsInfo.html">
+            <h2>Join Us</h2>
+          </a>          
+          <p class="project-link" onclick="displayProject(0)">Waste To Love</p>
+          <p class="project-link" onclick="displayProject(1)">Beautiful City</p>
+          <p class="project-link" onclick="displayProject(2)">Light To The Future</p>
+          </p>
+      </div>
+
+      <!-- contact info -->
+      <div class="more-info-box">
+        <p>
+          <a href="ContactUs.html">
+            <h2>Contact Us</h2>
+          </a>
+          88 Eight Street, Level 8 </br>
+          District 8, HCMC, Vietnam 700000 </br>
+          Tel: (84) 0101.1110 </br>
+          Email: beautifultrip@gmail.com
+        </p>
+      </div>
+
+      <!-- fb plug-in -->
+      <div class="more-info-box">
+        <div id="fb-root"></div>
+        <div class="fb-page"
+          data-href="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour"
+          data-tabs="timeline, events" data-width="250" data-height="300" data-small-header="false"
+          data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote
+            cite="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour"
+            class="fb-xfbml-parse-ignore">
+            <a
+              href="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour">Facebook</a>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <!-- copy-right -->
+    <p class="copy-right"> ©2020 by Meaningful Trip Beautiful You. All Rights Reserved </p>
+  </div>
+
+  <!-- script links -->
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+  <script src="../Script/Functions.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHGaQfwjoq4vx2Ze2J5c-PUeHuqCgweMc&callback=initMap">
+    </script>
+
+</footer>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Ready | MTBU</title>
+  <link href="../CSS/Util.css" rel="stylesheet">
+  <link href="../CSS/GetReady.css" rel="stylesheet">
+</head>
+<body onload="toTopWhenReload()">
+  <!-- Navigation bar -->
+  <div class="navigation-bar-responsive" id="navigation-bar-responsive">
+    <div class="navigation-bar" id="navigation-bar">
+      <!-- outside menu box -->
+      <div class="nav-unresponsive">
+        <!-- menu icon -->
+        <a id="nav-icon" class="nav-icon" onclick="openNavBar()">
+          <img alt="location" src="../Photos/menu.png">
+        </a>
+        <h3>MEANINGFUL TRIP ☘ BEAUTIFUL YOU</h3>
+      </div>
+      <!--responsive navigation bar -->
+      <div class="nav-responsive">
+        <!-- to home page button -->
+        <a type="button" href="Home.html">HOME</a>
+        <!-- drop box -->
+        <div class="drop-down">
+          <button>HOW IT WORKS</button>
+          <div class="drop-down-content">
+            <a href="ProjectsInfo.html">✎ Projects Information</a>
+            <a href="SelectionProcess.html">✓ Selection Process</a>
+            <a href="GetReady.html">☑ Get Ready</a>
+          </div>
+        </div>
+        <!-- to contact page button -->
+        <a type="button" href="ContactUs.html"> CONTACT US </a>
+        <!-- holine button -->
+        <div class="hotline">
+          <button onclick="openForm()" id="hotline-btn">✆ HOTLINE</button>
+          <div id="hotline-form" class="hotline-form">
+            <div class="hotline-form-box">
+              <span onclick="closeForm()" class="close">&times;</span></br></br>
+              <p>ENTER YOUR PHONE TO BE CONTACTED ASAP!<p></p>
+                <form>
+                  <input id="uphone" type="text" placeholder="Enter your phone here" required pattern=".*\S.*" />
+                  <input type="submit" value="Receive call now" onclick="validateSingleFieldForm('uphone')">
+                </form>
+                <p>*Or you can contact us at: (84) 0101.1110</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- location icon to google map -->
+      <a class="location-icon" target="_blank" ; href="http://bit.ly/mapToMTBY">
+        <img alt="location" src="../Photos/marker.png">
+      </a>
+    </div>
+  </div>
+  <!-- main page -->
+  <div class="main-page">
+    <!-- information column -->
+    <div class="main-info">
+      <!-- description -->
+      <div class="welcome">
+        <h1>Come to Vietnam on volunteer</h1>
+        <p>Wondering about what to prepare? Here are the basic information that you may find helpful! For more
+          information,
+          <span><a target="_blank" href="ContactUs.html">contact us!</a></span></p>
+      </div>
+      <!-- buttons to expand and collapse all sections -->
+      <div class="expand-collapse-btn">
+        <button class="expand-btn" onclick="expandAll()">
+          <h3>EXPAND ALL</h3>
+        </button>
+        <button class="collapse-btn" onclick="collapseAll()">
+          <h3>COLLAPSE ALL</h3>
+        </button>
+      </div>
+      <div class="section">
+        <button onclick="openInfo(0)">
+          <h3>HEALTH INSURANCE AND VISA APPLICATION →</h3>
+        </button>
+        <div class="section-info">
+          Please prepare a 3-month single tourist visa. Visa guideline with our partner agency information will be sent
+          after you get accepted. </br></br>
+          Health insurance and travel insurance are required for all volunteer.
+        </div>
+      </div>
+      <div class="section">
+        <button onclick="openInfo(1)">
+          <h3>FEES →</h3>
+        </button>
+        <div class="section-info">
+          Project fee of $120 for MTBU operation and events will be collected by the project manager when you arrive at
+          the volunteer place. Please prepare exactly 120 US Dollars. Please prepare around 200000 VND for
+          transportation from the airport to your accommodation. </br></br>
+          We do not cover any expenses including flights, insurance, .... Accommodation and meals are provided in some
+          projects. </br></br>
+        </div>
+      </div>
+      <div class="section">
+        <button onclick="openInfo(2)">
+          <h3>LIVING COST →</h3>
+        </button>
+        <div class="section-info">
+          <p>Costs of living for 45 days in Vietnam (Vietnamese Dong)</p>
+          <table>
+            <tr>
+              <td>Accommodation</td>
+              <td>3000000 - 6000000 VND </td>
+            </tr>
+            <tr>
+              <td>Meals</td>
+              <td>1000000 VND - 5000000 VND</td>
+            </tr>
+            <tr>
+              <td>Incidential Fees</td>
+              <td>1000000 VND - 2000000 VND</td>
+            </tr>
+            <tr>
+              <td>Personal Expenses (launtry, transportation, entertainment, ...)</td>
+              <td>1000000 VND - 5000000 VND</td>
+            </tr>
+            <tr>
+              <td>Transportation (Bus, Grab, Taxi, ...)</td>
+              <td>500000 VND - 2000000 VND</td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <th>6500000 VND - 20000000 VND</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section">
+        <button onclick="openInfo(3)">
+          <h3>HOUSING →</h3>
+        </button>
+        <div class="section-info">
+          For project that doesn't provide and cover accommodation. You can consider one of our hostel partners, $5/day
+          with breakfast covered.
+          We do recommend all the volunteer to live together. Its a great chance to make new friends while doing such
+          meaningful activities together.
+        </div>
+      </div>
+      <div class="section">
+        <button onclick="openInfo(4)">
+          <h3>WHAT DO I HAVE TO DO AFTER GET ACCEPTED? →</h3>
+        </button>
+        <div class="section-info">
+          <ol>
+            <li>Preview all the given materials save time for an ESM. Via the meeting, you can discuss with the project
+              manager about your job descriptions, living conditions and any other concerns.</li>
+            <li>Confirm for housing decision. We can help you to book the hostel for the day you come. </li>
+            <li>Apply for visa and buy health insurance. Our provided visa guidline may be helpful! </li>
+            <li>Don't forget to prepare exactly 120 US Dollars for project fee and exchange some Vietnamese Dong. You
+              will need VND for transportation at the airport.</li>
+            <li>Prepare youselves with Vietnam context, difficulties and culture.</li>
+            <li>Don't hestitate to ask us for any concerns!</li>
+          </ol>
+        </div>
+      </div>
+      <div class="section">
+        <button onclick="openInfo(5)">
+          <h3>WHAT HAPPENDS ONCE I GET TO VIETNAM (foreign volunteer)? →</h3>
+        </button>
+        <div class="section-info">
+          One of our volunteer will come and pick you at the airport. Your new friend will help you to buy sim card and
+          exchange money if needed. </br>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- footer -->
+<footer>
+  <!-- up to top btn -->
+  <button class="up-btn" onclick="toTop()" id="up-btn">
+    <img alt="up" src="../Photos/up.png">
+  </button>
+  <!-- messenger btn -->
+  <a class="messenger" href="https://www.messenger.com/t/MeaningfulTripBeautifulYou" target="_blank">
+    <img class="messenger-img" alt="messenger" src="../Photos/messenger.png">
+  </a>
+  <!-- footer -->
+  <div class="footer">
+    <!-- follow part -->
+    <div class="follow-us">
+      <!-- subscripe form -->
+      <div class="footer-subscribe-form">
+        <form>
+          <input id="subscribe-email" type="text" placeholder="Email Address" required pattern=".*\S.*" />
+          <input type="submit" value="SUBSCRIBE" onclick="validateSingleFieldForm('subscribe-email')">
+        </form>
+      </div>
+      <!-- contact shortcut -->
+      <div class="contact-shortcut">
+        <h2> FOLLOW US </h2>
+        <a target="_blank" ; href="https://www.facebook.com/tien.ng.2">
+          <img alt="facebook" src="../Photos/facebook.png">
+        </a>
+        <a target="_blank" ; href="https://www.linkedin.com/in/tienng2/">
+          <img alt="linkedin" src="../Photos/linkedin.png">
+        </a>
+        <a target="_blank" ; href="mailto:tiennguyenkit@gmail.com">
+          <img alt="email" src="../Photos/email.png">
+        </a>
+      </div>
+    </div>
+    <!-- more info  -->
+    <div class=more-info>
+
+      <!-- description -->
+      <div class="more-info-box">
+        <p>
+          <a href="Home.html">
+            <h2>Meaningful Trip Beautiful You</h2>
+          </a>
+          When your trips are not only about you anymore. <br />
+          Your hapiness is multiplied by thoundsands of smiles. <br />
+          The views, the people, and the actions. <br />
+          Beautiful by meaningful. <br />
+          You own your experience. <br />
+        </p>
+      </div>
+
+      <!-- project link -->
+      <div class="more-info-box">
+        <p>
+          <a href="ProjectsInfo.html">
+            <h2>Join Us</h2>
+          </a>          
+          <p class="project-link" onclick="displayProject(0)">Waste To Love</p>
+          <p class="project-link" onclick="displayProject(1)">Beautiful City</p>
+          <p class="project-link" onclick="displayProject(2)">Light To The Future</p>
+          </p>
+      </div>
+
+      <!-- contact info -->
+      <div class="more-info-box">
+        <p>
+          <a href="ContactUs.html">
+            <h2>Contact Us</h2>
+          </a>
+          88 Eight Street, Level 8 </br>
+          District 8, HCMC, Vietnam 700000 </br>
+          Tel: (84) 0101.1110 </br>
+          Email: beautifultrip@gmail.com
+        </p>
+      </div>
+
+      <!-- fb plug-in -->
+      <div class="more-info-box">
+        <div id="fb-root"></div>
+        <div class="fb-page"
+          data-href="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour"
+          data-tabs="timeline, events" data-width="250" data-height="300" data-small-header="false"
+          data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote
+            cite="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour"
+            class="fb-xfbml-parse-ignore">
+            <a
+              href="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour">Facebook</a>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <!-- copy-right -->
+    <p class="copy-right"> ©2020 by Meaningful Trip Beautiful You. All Rights Reserved </p>
+  </div>
+
+  <!-- script links -->
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+  <script src="../Script/Functions.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHGaQfwjoq4vx2Ze2J5c-PUeHuqCgweMc&callback=initMap">
+    </script>
+
+</footer>
+</html>

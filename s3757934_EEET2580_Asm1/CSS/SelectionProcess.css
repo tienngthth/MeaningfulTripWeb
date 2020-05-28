@@ -1,0 +1,55 @@
+.main-page {
+    width: 80%;
+    margin: auto;
+}
+.main-page img {
+    width: 100%;
+    padding-bottom: 50px;
+}
+@media screen and (max-width: 900px) { 
+    .main-page {
+        width: fit-content; 
+        margin: auto;
+    }
+    .main-page img {
+        position: relative;
+        right: 10px;
+        width: 110%;
+    }
+}
+.main-page p, .main-page ul {
+    line-height: 30px;
+}   
+.main-page h1 {
+    color: rgba(0, 18, 51, 0.9);
+    border-left: 3px solid midnightblue;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.main-page h2 {
+    font-weight: lighter;
+    color: rgba(0, 18, 51, 0.9);
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.main-page *{
+    text-align: left;
+}
+/* ---------------------------------format for each sections ------------------------------------------- */
+.projects, .eligible, .steps, .questions {
+    padding: 50px;
+}
+.eligible, .steps { 
+    background-color:rgba(204, 220, 255, 0.3);
+}
+.projects a {
+    border-bottom: 1px solid black;
+}
+.steps span {
+    font-weight: bolder;
+    margin-right: 5px;
+}
+.questions h4 {
+    margin-top: 15px;
+    color: rgba(0, 18, 51, 0.9); 
+}

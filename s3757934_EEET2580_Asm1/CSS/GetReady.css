@@ -1,0 +1,77 @@
+.main-page {
+    padding-bottom: 50px;
+    margin-top: 50px;
+    padding-top: 30px;
+    background-image: url("../Photos/volunteer2.png");
+}
+/* ----------------------------------- information column --------------------------------------------- */
+.main-info {
+    width: 450px;
+    margin: auto;
+}
+.main-info * {
+    text-align: left;
+}
+.main-info h3 {
+    color: rgb(89, 89, 89);
+    transition: linear;
+    transition-duration: 0.1s;
+}
+.main-info button {
+    transition: linear;
+    transition-duration: 0.1s;
+    background-color: rgb(230, 238, 255);
+    height: 50px;
+}
+.main-info button:hover {
+    background-color: rgb(89, 89, 89);
+}
+.main-info button:hover h3{
+    color: rgb(230, 238, 255);
+}   
+/* ------------------------------------ welcome paragraph --------------------------------------------- */
+.welcome *{
+    color: rgb(230, 238, 255);
+}
+.welcome a {
+    border-bottom: 1px solid black;
+}
+/* ------------------------------ expand all and collapse all button -----------------------------------*/
+.expand-collapse-btn {
+    margin-top: 20px;
+    display: flex;
+}
+.expand-collapse-btn * {
+    text-align: center;
+}
+.expand-collapse-btn button{
+    width: 50%;
+}
+.expand-btn {
+    border-right: 1px solid rgba(102, 102, 102, 0.2);
+}
+/* ---------------------------------------- section information --------------------------------------- */
+.section {
+    background-color: rgba(230, 238, 255, 0.5);
+    margin-top: 20px;
+}
+.section button {
+    width: 100%;
+    padding: 10px;
+}
+.section-info {
+    padding: 15px;
+    display: none;
+    line-height: 20px;
+}
+.section-info table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.section-info tr, .section-info td, .section-info th {
+    border: 1px solid black;
+    padding: 5px;
+}
+.section-info li {
+    margin-bottom: 5px;
+}

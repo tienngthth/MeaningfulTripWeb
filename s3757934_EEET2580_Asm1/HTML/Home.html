@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meaningful Trip Beautiful You</title>
+  <link href="../CSS/Util.css" rel="stylesheet">
+  <link href="../CSS/Home.css" rel="stylesheet">
+</head>
+<body onload="toTopWhenReload()">
+  <!-- Navigation bar -->
+  <div class="navigation-bar-responsive" id="navigation-bar-responsive">
+    <div class="navigation-bar" id="navigation-bar">
+      <!-- outside menu box -->
+      <div class="nav-unresponsive">
+        <!-- menu icon -->
+        <a id="nav-icon" class="nav-icon" onclick="openNavBar()">
+          <img alt="location" src="../Photos/menu.png">
+        </a>
+        <h3>MEANINGFUL TRIP ☘ BEAUTIFUL YOU</h3>
+      </div>
+      <!--responsive navigation bar -->
+      <div class="nav-responsive">
+        <!-- to home page button -->
+        <a type="button" href="Home.html">HOME</a>
+        <!-- drop box -->
+        <div class="drop-down">
+          <button>HOW IT WORKS</button>
+          <div class="drop-down-content">
+            <a href="ProjectsInfo.html">✎ Projects Information</a>
+            <a href="SelectionProcess.html">✓ Selection Process</a>
+            <a href="GetReady.html">☑ Get Ready</a>
+          </div>
+        </div>
+        <!-- to contact page button -->
+        <a type="button" href="ContactUs.html"> CONTACT US </a>
+        <!-- holine button -->
+        <div class="hotline">
+          <button onclick="openForm()" id="hotline-btn">✆ HOTLINE</button>
+          <div id="hotline-form" class="hotline-form">
+            <div class="hotline-form-box">
+              <span onclick="closeForm()" class="close">&times;</span></br></br>
+              <p>ENTER YOUR PHONE TO BE CONTACTED ASAP!<p></p>
+                <form>
+                  <input id="uphone" type="text" placeholder="Enter your phone here" required pattern=".*\S.*" />
+                  <input type="submit" value="Receive call now" onclick="validateSingleFieldForm('uphone')">
+                </form>
+                <p>*Or you can contact us at: (84) 0101.1110</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- location icon to google map -->
+      <a class="location-icon" target="_blank" ; href="http://bit.ly/mapToMTBY">
+        <img alt="location" src="../Photos/marker.png">
+      </a>
+    </div>
+  </div>
+  <!-- main page -->
+  <div class="main-page">
+    <!-- introduction -->
+    <div class="about-us">
+      <img class="img" src="../Photos/volunteering.png">
+      <!-- text -->
+      <div class="introduction-text">
+        <h1>WHO WE ARE</h1></br></br>
+        <div class="layout-intro">
+          <div class="part-intro">
+            <h4>OUR VISION</h4></br>
+            <p>
+              “Peace and the fulfilment of humankind’s potential” is our vision, that’s what drives organization. We
+              believe that individuals are the ones who will positively impact the society and will bring us closer to
+              our vision of the world.
+            </p>
+          </div>
+          <div class="part-intro">
+            <h4>OUR MISSION</h4></br>
+            <p>
+              Our mission is to develop leaders, activate leadership. The organization rises youth that have will and
+              opportunity to make a change in society. It’s the international platform for young people to discover and
+              develop their potential.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--testimonials  -->
+    <div class="testimonials">
+      <!-- Project slider -->
+      <div id="projects-slider" class="projects-slider">
+        <!-- regiester link -->
+        <a class="apply-link" href="SelectionProcess.html">Register Now</a></br></br>
+        <!-- a project slide -->
+        <div class="project-slide">
+          <img src="../Photos/foodWaste.jpg">
+          <div class="slide-text">
+            <p>TURN WASTE TO WEALTH</br>
+              REDUCE GREEN HOUSE GASES</br>
+              CREATE HAPPINESS
+            </p>
+          </div>
+        </div>
+        <!-- a project slide -->
+        <div class="project-slide">
+          <img src="../Photos/planting.jpg">
+          <div class="slide-text">
+            <p>JOIN US TO COLOR THE CITY </br>
+              WITH MANY FUN ACTIVITIES!
+            </p>
+
+          </div>
+        </div>
+        <!-- a project slide -->
+        <div class="project-slide">
+          <img src="../Photos/teaching.jpg">
+          <div class="slide-text">
+            <p>LIGHTENING A HUNDRED DREAMS</br>
+              INTRODUCE THE WORLD </br>
+              TO WONDERFUL KIDS
+            </p>
+          </div>
+        </div>
+        <!-- buttons and arrows to switch slide  -->
+        <div class="switching-slides-elements">
+          <a class="prev" onclick="switchSlides(-1)">❮</a>
+          <a class="next" onclick="switchSlides(1)">❯</a>
+          <span class="dot" onclick="displaySlide(0)"></span>
+          <span class="dot" onclick="displaySlide(1)"></span>
+          <span class="dot" onclick="displaySlide(2)"></span>
+        </div>
+      </div>
+      <!--  Quote -->
+      <div class="quote">
+        <p class="quote-para">
+          “Whatever community organization, whether it’s a women’s organization, or fighting for racial justice … you
+          will get satisfaction out of doing something to give back to the community that you never get in any other
+          way.” </br>
+          — Ruth Bader Ginsburg
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- footer -->
+<footer>
+  <!-- up to top btn -->
+  <button class="up-btn" onclick="toTop()" id="up-btn">
+    <img alt="up" src="../Photos/up.png">
+  </button>
+  <!-- messenger btn -->
+  <a class="messenger" href="https://www.messenger.com/t/MeaningfulTripBeautifulYou" target="_blank">
+    <img class="messenger-img" alt="messenger" src="../Photos/messenger.png">
+  </a>
+  <!-- footer -->
+  <div class="footer">
+    <!-- follow part -->
+    <div class="follow-us">
+      <!-- subscripe form -->
+      <div class="footer-subscribe-form">
+        <form>
+          <input id="subscribe-email" type="text" placeholder="Email Address" required pattern=".*\S.*" />
+          <input type="submit" value="SUBSCRIBE" onclick="validateSingleFieldForm('subscribe-email')">
+        </form>
+      </div>
+      <!-- contact shortcut -->
+      <div class="contact-shortcut">
+        <h2> FOLLOW US </h2>
+        <a target="_blank" ; href="https://www.facebook.com/tien.ng.2">
+          <img alt="facebook" src="../Photos/facebook.png">
+        </a>
+        <a target="_blank" ; href="https://www.linkedin.com/in/tienng2/">
+          <img alt="linkedin" src="../Photos/linkedin.png">
+        </a>
+        <a target="_blank" ; href="mailto:tiennguyenkit@gmail.com">
+          <img alt="email" src="../Photos/email.png">
+        </a>
+      </div>
+    </div>
+    <!-- more info  -->
+    <div class=more-info>
+
+      <!-- description -->
+      <div class="more-info-box">
+        <p>
+          <a href="Home.html">
+            <h2>Meaningful Trip Beautiful You</h2>
+          </a>
+          When your trips are not only about you anymore. <br />
+          Your hapiness is multiplied by thoundsands of smiles. <br />
+          The views, the people, and the actions. <br />
+          Beautiful by meaningful. <br />
+          You own your experience. <br />
+        </p>
+      </div>
+
+      <!-- project link -->
+      <div class="more-info-box">
+        <p>
+          <a href="ProjectsInfo.html">
+            <h2>Join Us</h2>
+          </a>          
+          <p class="project-link" onclick="displayProject(0)">Waste To Love</p>
+          <p class="project-link" onclick="displayProject(1)">Beautiful City</p>
+          <p class="project-link" onclick="displayProject(2)">Light To The Future</p>
+          </p>
+      </div>
+
+      <!-- contact info -->
+      <div class="more-info-box">
+        <p>
+          <a href="ContactUs.html">
+            <h2>Contact Us</h2>
+          </a>
+          88 Eight Street, Level 8 </br>
+          District 8, HCMC, Vietnam 700000 </br>
+          Tel: (84) 0101.1110 </br>
+          Email: beautifultrip@gmail.com
+        </p>
+      </div>
+
+      <!-- fb plug-in -->
+      <div class="more-info-box">
+        <div id="fb-root"></div>
+        <div class="fb-page"
+          data-href="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour"
+          data-tabs="timeline, events" data-width="250" data-height="300" data-small-header="false"
+          data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote
+            cite="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour"
+            class="fb-xfbml-parse-ignore">
+            <a
+              href="https://www.facebook.com/Meaningful-Trip-Beautiful-You-103182037969481/?modal=admin_todo_tour">Facebook</a>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <!-- copy-right -->
+    <p class="copy-right"> ©2020 by Meaningful Trip Beautiful You. All Rights Reserved </p>
+  </div>
+
+  <!-- script links -->
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+  <script src="../Script/Functions.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHGaQfwjoq4vx2Ze2J5c-PUeHuqCgweMc&callback=initMap">
+    </script>
+
+</footer>
+</html>

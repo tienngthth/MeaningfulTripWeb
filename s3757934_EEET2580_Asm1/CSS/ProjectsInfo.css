@@ -1,0 +1,145 @@
+.main-page {
+  margin-bottom: 60px;
+}
+/*  ---------------------------------------------about SDG -------------------------------------------- */
+.SDG img {
+  width: 70%;
+  margin-bottom: 20px;
+}
+.SDG {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: rgb(230, 238, 255);
+}
+.SDG-text {
+  width: 60%;
+  margin: auto;
+}
+.SDG-text *, .SDG-text{
+  text-align: left;
+  padding-bottom: 10px;
+  color: rgb(77, 77, 77);
+}
+.SDG-text h2 {
+  font-size: 20px;
+}
+@media screen and (max-width: 700px) {
+  .SDG {
+    padding-top: 20px;
+  }
+  .SDG img, .SDG-text {
+    width: 95%;
+  }
+  .SDG-text *, .SDG-text {
+    font-size: 18px;
+  }
+}
+/* -------------------------------------------about projects------------------------------------------ */
+.projects {
+  margin-top: 50px;
+}
+.a-project {
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+  border-bottom: 0.5px solid rgb(230, 230, 230); 
+  border-top: 0.5px solid rgb(230, 230, 230);  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 90%;
+}
+@media screen and (max-width: 600px) {
+  .a-project {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.a-project h2 {
+  font-size: 18px;
+}
+/* ---------------------project description ------------------ */
+.project-description * {
+  text-align: left;
+  line-height: 30px;
+}
+.project-description .contact-link {
+  color: dodgerblue;
+  cursor: pointer;
+  width: 90px;
+  border-bottom: 1px solid white;
+}
+.project-description .contact-link:hover {
+  border-bottom: 1px solid dodgerblue;
+}
+/* --------------project image and apply info link----------- */
+.image {
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+.image img {
+  width: 500px;
+  height: 300px;
+}
+.register-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: ease;
+  transition-duration: 0.3s;
+  opacity: 0;
+}
+.link-description {
+  width: 500px;
+  height: 300px;
+  background-color: rgba(230, 238, 255,0.8); 
+  position: relative;
+}
+.link-description p {
+  text-align: left;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  line-height: 2;
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+}
+.link-description h3 {
+  display: inline;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.link-description img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media screen and (max-width: 700px) {
+  .link-description img {
+    right: 80px;
+  }
+}
+.image:hover .register-link { 
+  opacity: 1;
+}
+/* ------------project information table---------------------- */
+.project-info,  .project-info *{
+  text-align: left;
+}
+table {
+  margin-top: 8px;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  min-width: 150px;
+  width: 250px;
+  font-size: 13px;
+}
+td {
+  background-color: rgb(230, 238, 255);
+}

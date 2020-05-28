@@ -1,0 +1,358 @@
+/* -----------------------------default edition----------------------------------------------------- */
+* {
+    font-family: Lato, sans-serif;
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    width: fit-content;
+}
+a:hover, button:hover {
+    color: dodgerblue;
+}
+button:focus {
+    outline: none;
+}
+form {
+    display: inline-block;
+    width: 70%;
+}
+textarea {
+    height: 150px;
+}
+input[type=submit] {
+    width: 100%; /* Full width */
+    padding: 15px;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+form input[type=submit]:hover {
+    opacity: 0.8;
+}
+input[type=text], textarea {
+  text-align: left;
+  width: 100%; /* Full width */
+  padding: 10px; /* Some padding */ 
+  margin-bottom: 10px; /* Bottom margin */
+  margin-right: 10px;
+  border: none; 
+  box-sizing: border-box;
+  resize: vertical;
+}
+p, input, textarea{  
+    font-size: 16px;
+    line-height: 1.6;
+}
+p > img {
+    width: 25px;
+    height: 25px;
+}
+a > img {
+    width: 15px;
+    height: 15px;
+}
+button > img {
+    width: 30px;
+    height: 30px;
+}
+button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+/* ----------------------------------Navigation bar styles ----------------------------------------------*/
+.navigation-bar-responsive {
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: fit-content;
+  }
+.navigation-bar {
+    margin-top: 0;
+    padding-top: 10px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0px 4px 5px 0px rgb(187, 187, 187);
+}
+.navigation-bar button, .navigation-bar a {
+  padding: 16px;
+  font-size: 14px;
+  border: 2px solid rgba(187, 187, 187, 0);
+}
+
+.navigation-bar button:hover, .navigation-bar a:hover {
+    border-bottom: 2px solid dodgerblue;
+}
+/*----------------- drop down sections --------------------*/
+.drop-down, .hotline, .nav-responsive {
+    position: relative;
+    display: inline-block;
+}
+.drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.drop-down:hover .drop-down-content {
+    display: block;
+}
+.drop-down-content a {
+    text-align: left;
+    display: block;
+    padding-bottom: 10px;
+}
+/* ------------------hotline section----------------------- */
+.hotline button {
+    padding: 14.5px;
+}
+.hotline-form {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(	0, 9, 26, 0.9);
+ }
+.hotline-form-box p {
+  color: white;
+  margin-bottom: 10px;
+}
+.hotline-form-box input[type=text]{
+  margin-bottom: 0;
+}
+.hotline-form-box input[type=submit] {    
+  background-color: rgba(0, 18, 51, 0.9);
+  margin-top: 0;
+} 
+.hotline-form-box {
+  background-color: rgb(157, 208, 225);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  min-width: 300px;
+}
+.close {
+  color: rgba(0, 18, 51, 0.9);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover {
+  cursor: pointer;
+  color: black;
+}
+/* -----------------location image -------------------------- */
+.navigation-bar img {
+  width: 25px;
+  height: 25px;
+}
+/* -----------------reponsive menu---------------------------- */
+#nav-icon {
+display: none;
+padding: 0;
+padding-left: 10px;
+margin: 0;
+float: left;
+}
+#nav-icon:hover {
+opacity: 0.8;
+cursor: pointer;
+border: 2px solid rgba(255, 255, 255, 0);
+}
+@media screen and (max-width: 700px) {
+  #nav-icon {    
+    display: block;
+  }
+  .location-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  .location-icon:hover {
+    opacity: 0.5;
+  }
+  .navigation-bar a:not(:last-child), .navigation-bar .drop-down, .navigation-bar .hotline button {
+    display: none;
+  }
+  .navigation-bar.open a, .navigation-bar.open .drop-down, .navigation-bar.open .hotline button, .navigation-bar .nav-responsive {
+    display: block;
+    text-align: left;
+  }
+  .nav-responsive a[type=button]::before, .navigation-bar .nav-responsive button::before {
+    content: "|  ";   
+  }
+  .drop-down-content {
+    position: absolute;
+    left: 100px;
+  }
+  .nav-unresponsive h3 {
+    width: 90%;
+  }
+  .nav-responsive {
+    border-bottom: 2px solid dodgerblue;
+  }
+}
+@media screen and (min-width: 700px) {    
+  .navigation-bar-responsive {
+      background-color: unset !important;
+  }
+  .main-page {
+    margin-top: 80px !important;
+  }
+}
+/* --------------------------------------main-page ------------------------------------------------------*/
+.main-page {
+margin-top: 60px
+}
+/* --------------------------------------------------footer-------------------------------------------- */
+/* ----------------------messenger icon----------------*/
+.messenger-img {
+  width: 30px;
+  height: 30px;
+}
+.messenger {
+  position: fixed;
+  bottom: 70px;
+  right: 16px;
+  animation: fluctuate 1s ease;
+  animation-iteration-count: infinite;
+  z-index: 99;
+}
+.messenger:hover {
+  animation-play-state: paused;
+  animation: bounceIn 1s ease;
+}
+@keyframes bounceIn{
+  0% { 
+    transform: scale(1); 
+  } 
+  30% { 
+    transform: scale(1.25); 
+  }
+  100% { 
+    transform: scale(1); 
+  }
+}
+@keyframes fluctuate {
+  15% { 
+    transform: none;
+  } 
+  20% { 
+    transform: rotate(-20deg);
+  } 
+  35% { 
+    transform: rotate(20deg);
+  } 
+  40% { 
+    transform: rotate(-20deg);
+  } 
+  55% { 
+    transform: rotate(20deg);
+  } 
+  60% { 
+    transform: rotate(0deg);
+  }
+}
+/* --------------------to top page btn----------------- */
+/* up btn */
+.up-btn:hover {
+    opacity: 0.8;
+}
+.up-btn {
+    background: none;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+}
+/* ------------------footer information----------------- */
+.footer * {
+  text-align: left;
+  font-size: 13px;
+  line-height: 2;
+}
+.footer h2 {
+  padding-bottom: 10px;
+}
+.footer {
+  margin-top: 0px;
+  background-color: rgb(204, 220, 255); 
+}
+/* ----------------media and subscribe-------------------- */
+.follow-us {
+  background-color: rgb(230, 238, 255);
+  padding: 20px;
+  padding-left: 70px;
+}
+.contact-shortcut a, .contact-shortcut h2 {
+  padding-right: 20px;
+  display: inline;
+}
+.footer-subscribe-form form {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.footer-subscribe-form input {
+  padding: 5px;
+  margin: 0;
+  border: 1px groove rgb(204, 220, 255);
+}
+.footer-subscribe-form input[type=text] {
+  width: 270px;
+  padding-left: 15px;
+  border-right: none;
+}
+.footer-subscribe-form input[type=submit] {
+  text-align: center;
+  width: 100px;
+  background-color:rgb(230, 238, 255);
+  color: black;
+  border-left: none;
+}
+.footer-subscribe-form input[type=submit]:hover {
+  background-color:rgba(204, 220, 255, 0.3);
+}
+/*--------------- more information columns-------------- */
+.more-info {
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 300px));
+  padding-left: 50px;
+}
+.more-info-box {
+  border-bottom: 2px groove rgb(230, 238, 255);  
+  padding: 20px;
+}
+.copy-right {
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.project-link:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
